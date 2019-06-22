@@ -31,8 +31,16 @@ def turn(board)
     move(board, index)
     display_board(board)
   else
+    puts "Sorry that is an invalid move"
     turn(board)
   end
 end
 
 # Define your play method below
+def play(board)
+  num_turns = 0
+  until num_turns == 9
+    turn(board)
+    num_turns += 1
+  end
+end
